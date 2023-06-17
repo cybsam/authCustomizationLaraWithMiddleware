@@ -20,3 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//verify link
+Route::get('User/Verify/Email',[App\Http\Controllers\auth\registerController::class, 'verifyUser'])->name('verifyUser');
